@@ -1,6 +1,7 @@
 <view class="container timer {{isRuning ? 'timer--runing': ''}}">
+  <image src="../../image/background/1.JPG" class="background-image"></image>
   <view class="timer_main">
-    <picker mode="time" value="{{time}}" start="00" end="60" bindchange="bindTimeChange">
+    <picker mode="time" value="{{time}}" start="1" end="60" bindchange="bindTimeChange">
       <view class="timer_time-wrap">
         <view class="timer_progress_mask"></view>
         <view class="timer_progress timer_left">
@@ -15,9 +16,10 @@
       </view>
     </picker>
 
-    <picker class="picker-container" bindchange="handlePickerChange" value="{{selectedTodoIndex}}" range="{{todoNames}}">
-      <input type="text" class="timer_inputname" bindinput="changeLogName" placeholder="选择任务名" value="{{currentName}}"/>
+    <picker class="picker-container {{isRuning ? 'hide' : ''}}" bindchange="handlePickerChange" value="{{selectedTodoIndex}}" range="{{todoNames}}" >
+      <input type="text" class="timer_inputname" bindinput="changeLogName" placeholder="选择任务名" value="{{currentName}}" />
     </picker>
+
   </view>
 
   <view class="timer_footer">

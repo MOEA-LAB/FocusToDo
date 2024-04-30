@@ -189,7 +189,6 @@ Page({
     }
   },
 
-
   handlePickerChange: function (e) {
     const index = e.detail.value;
     const selectedTodo = this.data.todoNames[index]; // 使用todoNames获取选中项
