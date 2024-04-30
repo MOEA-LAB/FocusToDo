@@ -18,7 +18,7 @@
     </picker>
 
     <picker class="picker-container {{isRuning ? 'hide' : ''}}" bindchange="handlePickerChange" value="{{selectedTodoIndex}}" range="{{todoNames}}">
-      <input type="text" class="timer_inputname" bindinput="changeLogName" placeholder="选择任务名" value="{{currentName}}" />
+      <input type="text" class="timer_inputname" bindinput="changeLogName" value="选择任务名" value="{{currentName}}" />
     </picker>
   </view>
 
