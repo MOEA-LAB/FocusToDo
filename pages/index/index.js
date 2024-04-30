@@ -50,6 +50,9 @@ Page({
   },
 
   onShow: function () {
+      wx.setNavigationBarTitle({
+        title: '专注'
+      });
     if (this.data.isRuning) return
     let workTime = util.formatTime(wx.getStorageSync('workTime'), 'HH')
     let restTime = util.formatTime(wx.getStorageSync('restTime'), 'HH')
