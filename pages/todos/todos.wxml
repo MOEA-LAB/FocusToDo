@@ -1,9 +1,12 @@
 <view class="todo_container">
+
   <view class="header">
-    <!-- <image class="plus" src="../../image/plus.png"/> -->
-    <input class="new-todo" value="{{ input }}" placeholder="添加任务" bindinput="inputChangeHandle" bindconfirm="addTodoHandle" confirm-type="done" />
-    <image class="plus" wx:if="{{input}}" bindtap="addTodoHandle" src="../../image/yes.png" />
+    <!-- Replace the input field and add button with three custom image buttons -->
+    <div class="custom-btn sun" bindtap="handleGetup"></div>
+    <div class="custom-btn moon" bindtap="handleSleep"></div>
+    <div class="custom-btn setting" bindtap="handleAddToDo"></div>
   </view>
+
   <block wx:if="{{ todos.length }}">
     <view class="footer">
       <!-- <text class="btn" bindtap="toggleAllHandle">✔ 全选</text> -->

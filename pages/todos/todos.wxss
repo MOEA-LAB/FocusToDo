@@ -130,3 +130,21 @@ margin: 0 3%;
   color: #c4c4c4;
   text-align: center;
 }
+.custom-btn {
+  width: 10px; /* Size for the container */
+  height: 10px; /* Size for the container */
+  background-size: 10px 10px; /* Size for the background image */
+}
+
+@import "./sun.wxss";
+@import "./moon.wxss";
+@import "./set.wxss";
+
+
+
+
+.custom-btn {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  background-size: cover;
+}

@@ -55,6 +55,49 @@ Page({
     })
     this.save()
   },
+  
+
+  handleAddToDo: function () {
+    let that = this; // Capture 'this' context
+    wx.showModal({
+      title: 'Add Task',
+      content: '',
+      editable: true, // Enable input field
+      placeholderText: 'Task name', // Placeholder in input field
+      showCancel: true, // Show cancel button
+      confirmText: 'Confirm', // Text for confirm button
+      cancelText: 'Cancel', // Text for cancel button
+      success: function (res) {
+        if (res.confirm) {
+          // User clicked the confirm button
+          const taskName = res.content; // Assuming 'res.content' contains the input value
+          if (taskName && taskName.trim()) {
+            // Task name is not empty
+            var todos = that.data.todos;
+            todos.push({ name: taskName.trim(), completed: false });
+            var logs = that.data.logs;
+            logs.push({ timestamp: new Date(), action: 'Add', name: taskName.trim() });
+            that.setData({
+              input: '',
+              todos: todos,
+              leftCount: that.data.leftCount + 1,
+              logs: logs
+            });
+            that.save();
+          } else {
+            // Task name is empty
+            wx.showToast({
+              title: 'Task name cannot be empty',
+              icon: 'none'
+              });
+            }
+          } else if (res.cancel) {
+            // User clicked the cancel button
+            console.log('User canceled the action');
+          }
+        }
+    });
+  },
 
   toggleTodoHandle: function (e) {
     var index = e.currentTarget.dataset.index
