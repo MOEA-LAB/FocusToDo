@@ -113,6 +113,7 @@ page{
   position: absolute;
   bottom: -40px;
   width: 50%;
+  left: 25%;
   text-align: center;
   height: 40px;
   color: #cfcfcf;
@@ -223,4 +224,10 @@ page{
   bottom: 0;
   width: 100%;
   z-index: 10;
+}
+
+/* Picker 容器样式 */
+.picker-container {
+  bottom: -40px;
+  color: #cfcfcf;
 }

@@ -23,13 +23,33 @@ Page({
     isRuning: false,
     leftDeg: initDeg.left,
     rightDeg: initDeg.right,
-    vibison: ''
-      },
+    vibison: '',
+    currentName: '',
 
-  onLoad: function (options) {
+    todos: [],
+    leftCount: 0,
+    logs: [],
+    selectedTodo: '',
+    selectedTodoIndex: 0,
+    todoNames: [] // 存储待办事项名称的数组
   },
 
-  onShow: function() {
+  onLoad: function (options) {
+    var todos = wx.getStorageSync('todo_list') || [];
+    var leftCount = todos.filter(function (item) {
+      return !item.completed;
+    }).length;
+    var todoNames = todos.map(item => item.name); // 提取名称到数组
+    this.setData({
+      todos: todos,
+      leftCount: leftCount,
+      todoNames: todoNames // 更新todoNames
+    });
+    var logs = wx.getStorageSync('todo_logs') || [];
+    this.setData({ logs: logs });
+  },
+
+  onShow: function () {
     if (this.data.isRuning) return
     let workTime = util.formatTime(wx.getStorageSync('workTime'), 'HH')
     let restTime = util.formatTime(wx.getStorageSync('restTime'), 'HH')
@@ -40,7 +60,14 @@ Page({
     })
   },
 
-  startTimer: function(e) {
+  bindTimeChange: function (e) {
+    let time = e.detail.value;
+    const mins = parseInt(time, 10);
+    wx.setStorageSync('workTime', mins);
+    this.onShow();
+  },
+
+  startTimer: function (e) {
     let startTime = Date.now()
     let startTimeShow = this.getTime() //（安卓与iOS时间显示不一致）转换时间为统一格式显示。
     let isRuning = this.data.isRuning
@@ -49,22 +76,22 @@ Page({
     let keepTime = showTime * 60 * 1000
     let logName = this.logName || defaultLogName[timerType]
     this.vibshort()
-    if (!isRuning) {   
-      this.timer = setInterval((function() {
+    if (!isRuning) {
+      this.timer = setInterval((function () {
         this.updateTimer()
-        this.startNameAnimation()       
+        this.startNameAnimation()
       }).bind(this), 1000)
     } else {
       this.stopTimer()
     }
-   
+
     this.setData({
       isRuning: !isRuning,
       completed: false,
       timerType: timerType,
       remainTimeText: showTime + ':00',
       taskName: logName
-    
+
     })
 
     this.data.log = {
@@ -79,7 +106,7 @@ Page({
     this.saveLog(this.data.log)
   },
 
-  startNameAnimation: function() {
+  startNameAnimation: function () {
     let animation = wx.createAnimation({
       duration: 450
     })
@@ -90,40 +117,40 @@ Page({
     })
   },
 
-  stopTimer: function() {
+  stopTimer: function () {
     // reset circle progress
     this.setData({
       leftDeg: initDeg.left,
       rightDeg: initDeg.right
     })
-  this.viblong()    
-  this.timer && clearInterval(this.timer)
-  //  震动 ；clear timer
+    this.viblong()
+    this.timer && clearInterval(this.timer)
+    //  震动 ；clear timer
   },
 
-viblong: function(){
-  let vibison = wx.getStorageSync('vibison')//页面传参，以缓存形式
-  this.setData({
-    vibison: vibison
-  })
-if(vibison){     //振动功能的开闭
-  wx.vibrateLong()
-}else{
-}
-},
+  viblong: function () {
+    let vibison = wx.getStorageSync('vibison')//页面传参，以缓存形式
+    this.setData({
+      vibison: vibison
+    })
+    if (vibison) {     //振动功能的开闭
+      wx.vibrateLong()
+    } else {
+    }
+  },
 
-vibshort: function(){
-  let vibison = wx.getStorageSync('vibison')//页面传参，以缓存形式
-  this.setData({
-    vibison: vibison
-  })
-if(vibison){     //振动功能的开闭
-  wx.vibrateShort()
-}else{
-}
-},
+  vibshort: function () {
+    let vibison = wx.getStorageSync('vibison')//页面传参，以缓存形式
+    this.setData({
+      vibison: vibison
+    })
+    if (vibison) {     //振动功能的开闭
+      wx.vibrateShort()
+    } else {
+    }
+  },
 
-  updateTimer: function() {
+  updateTimer: function () {
     let log = this.data.log
     let now = Date.now()
     let remainingTime = Math.round((log.endTime - now) / 1000)
@@ -162,56 +189,65 @@ if(vibison){     //振动功能的开闭
     }
   },
 
-  changeLogName: function(e) {
-    this.logName = e.detail.value
+
+  handlePickerChange: function (e) {
+    const index = e.detail.value;
+    const selectedTodo = this.data.todoNames[index]; // 使用todoNames获取选中项
+    this.setData({
+      selectedTodo: selectedTodo,
+      selectedTodoIndex: index,
+      currentName: selectedTodo
+    });
+    this.logName = selectedTodo
+
   },
 
-  saveLog: function(log) {
+  saveLog: function (log) {
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(log)
     wx.setStorageSync('logs', logs)
   },
   onShareAppMessage: function (res) {
 
-    if (res.from ==='button') {
+    if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
       return {
-        title:'管理时间，保持专注！让自律成为习惯！',
-         path: '/pages/index/index',
-        imageUrl:'/image/share.jpg' //不设置则默认为当前页面的截图
+        title: '管理时间，保持专注！让自律成为习惯！',
+        path: '/pages/index/index',
+        imageUrl: '/image/share.jpg' //不设置则默认为当前页面的截图
       }
     }
   },
-    onShareTimeline: function (res){
-        return{  
-          title: '管理时间，保持专注，让自律成为习惯！',
-          query: {   
-            // key: 'value' //要携带的参数 
-          },  
-          imageUrl: '/image/about.png'   
-        }    
-    
-      },
-
-
-    getTime(){
-      let date1=new Date();
-      let year=this.appendZero(date1.getFullYear());
-      let month=this.appendZero(date1.getMonth()+1)
-      let day=this.appendZero(date1.getDate());
-      let hours=this.appendZero(date1.getHours());
-      let minutes=this.appendZero(date1.getMinutes());
-      let seconds=this.appendZero(date1.getSeconds());
-      return year+"年 "+month+"月"+day+'日 '+"\xa0\xa0\xa0"+hours+":"+minutes+":"+seconds
-    },
-    //过滤补0
-    appendZero(obj) {
-      if (obj < 10) {
-        return "0" + obj;
-      } else {
-        return obj;
-      }
+  onShareTimeline: function (res) {
+    return {
+      title: '管理时间，保持专注，让自律成为习惯！',
+      query: {
+        // key: 'value' //要携带的参数 
+      },
+      imageUrl: '/image/about.png'
     }
+
+  },
+
+
+  getTime() {
+    let date1 = new Date();
+    let year = this.appendZero(date1.getFullYear());
+    let month = this.appendZero(date1.getMonth() + 1)
+    let day = this.appendZero(date1.getDate());
+    let hours = this.appendZero(date1.getHours());
+    let minutes = this.appendZero(date1.getMinutes());
+    let seconds = this.appendZero(date1.getSeconds());
+    return year + "年 " + month + "月" + day + '日 ' + "\xa0\xa0\xa0" + hours + ":" + minutes + ":" + seconds
+  },
+  //过滤补0
+  appendZero(obj) {
+    if (obj < 10) {
+      return "0" + obj;
+    } else {
+      return obj;
+    }
+  }
 
 })
