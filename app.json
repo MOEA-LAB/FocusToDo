@@ -1,7 +1,7 @@
 {
   "useExtendedLib": {
-  "weui": true
-},
+    "weui": true
+  },
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
@@ -12,20 +12,24 @@
     "pages/more/more",
     "pages/todos/todos",
     "pages/poster/poster",
-    "pages/version/version"
+    "pages/version/version",
+    "pages/night/index",
+    "pages/morning/index"
   ],
   "navigateToMiniProgramAppIdList": [
     "wxe333b834a643f99d",
     "wx8abaf00ee8c3202e"
-  ],    
-  "requiredBackgroundModes": ["audio","location"],
-
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EDEDED",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
-   }, 
+  },
   "tabBar": {
     "color": "#cdcdcd",
     "selectedColor": "#000000",
@@ -38,13 +42,12 @@
         "selectedIconPath": "image/yu2.png",
         "text": "专注"
       },
-
       {
         "pagePath": "pages/todos/todos",
         "iconPath": "image/todo2.png",
         "selectedIconPath": "image/todo.png",
         "text": "待办"
-      },      
+      },
       {
         "pagePath": "pages/logs/logs",
         "iconPath": "image/jilu.png",

@@ -216,7 +216,10 @@ Page({
       action: "起床打卡",
     };
     this.saveLog(this.data.log);
-    console.log("getup")
+    console.log("getup");
+    wx.navigateTo({
+      url: '/pages/morning/index', // todos页面的路径
+    });
   },
   handleSleep: function() {
     const logName = "Sleep";
@@ -229,6 +232,9 @@ Page({
     };
     this.saveLog(this.data.log);
     console.log("sleep");
+    wx.navigateTo({
+      url: '/pages/night/index', // todos页面的路径
+    });
   }  
 
 })
