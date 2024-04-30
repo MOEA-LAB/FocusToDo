@@ -1,13 +1,14 @@
 Page({
   data: {
     input: '',
+    log: {},
     todos: [],
     leftCount: 0,
     allCompleted: false,
     logs: [],
     toastHidden: true,
   },
-  onShow: function() {
+  onShow: function () {
     wx.setNavigationBarTitle({
       title: '待办清单'
     })
@@ -55,7 +56,7 @@ Page({
     })
     this.save()
   },
-  
+
 
   handleAddToDo: function () {
     let that = this; // Capture 'this' context
@@ -89,13 +90,13 @@ Page({
             wx.showToast({
               title: 'Task name cannot be empty',
               icon: 'none'
-              });
-            }
-          } else if (res.cancel) {
-            // User clicked the cancel button
-            console.log('User canceled the action');
+            });
           }
+        } else if (res.cancel) {
+          // User clicked the cancel button
+          console.log('User canceled the action');
         }
+      }
     });
   },
 
@@ -152,7 +153,7 @@ Page({
     this.save()
     wx.vibrateShort()
   },
-  
+
   clearCompletedHandle: function (e) {
     var todos = this.data.todos
     var remains = []
@@ -170,33 +171,64 @@ Page({
     this.setData({
       toastHidden: false
     })
-  wx.vibrateShort()
+    wx.vibrateShort()
   },
-  hideToast: function() {
+  hideToast: function () {
     this.setData({
       toastHidden: true
     })
   },
   onShareAppMessage: function (res) {
 
-    if (res.from ==='button') {
+    if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
       return {
-        title:'管理时间，保持专注！让自律成为习惯！',
-         path: '/pages/index/index',
-        imageUrl:'/image/share.jpg' //不设置则默认为当前页面的截图
+        title: '管理时间，保持专注！让自律成为习惯！',
+        path: '/pages/index/index',
+        imageUrl: '/image/share.jpg' //不设置则默认为当前页面的截图
       }
     }
   },
-    onShareTimeline: function (res){
-        return{  
-          title: '管理时间，保持专注，让自律成为习惯！',
-          query: {   
-            // key: 'value' //要携带的参数 
-          },  
-          imageUrl: '/image/about.png'   
-        }    
-      }
-   
+  onShareTimeline: function (res) {
+    return {
+      title: '管理时间，保持专注，让自律成为习惯！',
+      query: {
+        // key: 'value' //要携带的参数 
+      },
+      imageUrl: '/image/about.png'
+    }
+  },
+
+  saveLog: function (log) {
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(log)
+    wx.setStorageSync('logs', logs)
+  },
+
+  handleGetup: function() {
+    const logName = "Getup";
+    const startTimeShow = new Date().toLocaleTimeString();
+    this.data.log = {
+      name: logName,
+      startTime: Date.now(),
+      startTimeShow: startTimeShow,
+      action: "起床打卡",
+    };
+    this.saveLog(this.data.log);
+    console.log("getup")
+  },
+  handleSleep: function() {
+    const logName = "Sleep";
+    const startTimeShow = new Date().toLocaleTimeString();
+    this.data.log = {
+      name: logName,
+      startTime: Date.now(),
+      startTimeShow: startTimeShow,
+      action: "睡觉打卡",
+    };
+    this.saveLog(this.data.log);
+    console.log("sleep");
+  }  
+
 })

@@ -25,6 +25,7 @@ Page({
     rightDeg: initDeg.right,
     vibison: '',
     currentName: '',
+    randomBG: 1,
 
     todos: [],
     leftCount: 0,
@@ -47,12 +48,19 @@ Page({
     });
     var logs = wx.getStorageSync('todo_logs') || [];
     this.setData({ logs: logs });
+
+    var randomNum = Math.floor(Math.random() * 9) + 1;
+    this.setData({ randomBG: randomNum }); // 将随机数存储到页面的数据中
+    // 可以在控制台输出看看结果
+    console.log('随机数:', this.data.randomBG);
+
   },
 
+
   onShow: function () {
-      wx.setNavigationBarTitle({
-        title: '专注'
-      });
+    wx.setNavigationBarTitle({
+      title: '专注'
+    });
     if (this.data.isRuning) return
     let workTime = util.formatTime(wx.getStorageSync('workTime'), 'HH')
     let restTime = util.formatTime(wx.getStorageSync('restTime'), 'HH')
