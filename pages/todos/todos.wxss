@@ -1,17 +1,23 @@
 .header {
   display: flex;
   align-items: center;
-  border: 1rpx solid #e0e0e0;
+  justify-content: flex-end; /* 让图标尽可能靠右排列 */
   border-radius: 10rpx;
-  box-shadow: 5px 5px 5px #e0e0e0;
   margin-bottom: 30rpx;
   padding: 20rpx;
   width: 94%;
   height: 90rpx;
-  background-color: #ffffff;
-text-align: center;
-margin-left: 3%;
+  /* background-color: #ffffff; */
+  text-align: center;
+  margin-left: 3%;
 }
+
+/* 新增日期样式 */
+.date {
+  margin-right: auto; /* 将日期元素向左移动，与图标之间留出空白 */
+}
+
+
 .back_container {
   height: 100%;
   background-color: #ededed;
@@ -55,11 +61,21 @@ margin-left: 3%;
   background-color: #6f879f;
   border-radius: 10rpx;
   margin-bottom: 10rpx;
-  background-image: url("https://s3.ax1x.com/2021/03/17/6cxSER.jpg");
+  background-image: url("https://cdn.mathpix.com/snip/images/b2Cb0jqRYktyyeOwdjHGZmLCJNhFsyJ2zbr6cGgyFZs.original.fullsize.png");
   background-size: 110%;
   background-repeat: no-repeat;
 }
-
+/* optional
+https://cdn.mathpix.com/snip/images/b2Cb0jqRYktyyeOwdjHGZmLCJNhFsyJ2zbr6cGgyFZs.original.fullsize.png
+https://cdn.mathpix.com/snip/images/HbXbQGT374J-wBAHG-lxBT8YOHAVMJeiJTUqBg7OXsw.original.fullsize.png
+https://cdn.mathpix.com/snip/images/gWoxAPbvuFTY5gYpJRVExryaf2rfJZLbyFUT2BGbouw.original.fullsize.png
+https://cdn.mathpix.com/snip/images/SMbxHKN67iEHyQh33x7MsnirmpNCaYp89zjZDxEOvnE.original.fullsize.png
+https://cdn.mathpix.com/snip/images/p3CKbudJZ5kWNKnL6UhZ1vfqS7_5gYY9RFH3fF28cz0.original.fullsize.png
+https://cdn.mathpix.com/snip/images/FGj48b_nQpqwMQ3s4M508qwTMs26GkaNuZ7NF8kqCio.original.fullsize.png
+https://cdn.mathpix.com/snip/images/m8946izSeakPJBG3uoJNn92dRlfYfLQNb3Pr1LjVnog.original.fullsize.png
+https://cdn.mathpix.com/snip/images/Suyzj4oEusVmvqLNJs1dpDRQuoc_tJBa887rRtbW5bU.original.fullsize.png
+https://cdn.mathpix.com/snip/images/WJ6rfnD8RfZeHfhDK-Cl8gKRYUH66dD_mmA1A6jxzY4.original.fullsize.png
+*/
 .todos .item:last-child {
   border-bottom: 0;
 }

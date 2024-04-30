@@ -7,6 +7,18 @@ Page({
     allCompleted: false,
     logs: [],
     toastHidden: true,
+    currentDate: '',
+    backgrounds:[
+      "https://cdn.mathpix.com/snip/images/b2Cb0jqRYktyyeOwdjHGZmLCJNhFsyJ2zbr6cGgyFZs.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/HbXbQGT374J-wBAHG-lxBT8YOHAVMJeiJTUqBg7OXsw.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/gWoxAPbvuFTY5gYpJRVExryaf2rfJZLbyFUT2BGbouw.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/SMbxHKN67iEHyQh33x7MsnirmpNCaYp89zjZDxEOvnE.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/p3CKbudJZ5kWNKnL6UhZ1vfqS7_5gYY9RFH3fF28cz0.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/FGj48b_nQpqwMQ3s4M508qwTMs26GkaNuZ7NF8kqCio.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/m8946izSeakPJBG3uoJNn92dRlfYfLQNb3Pr1LjVnog.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/Suyzj4oEusVmvqLNJs1dpDRQuoc_tJBa887rRtbW5bU.original.fullsize.png",
+      "https://cdn.mathpix.com/snip/images/WJ6rfnD8RfZeHfhDK-Cl8gKRYUH66dD_mmA1A6jxzY4.original.fullsize.png"
+    ],
   },
   onShow: function () {
     wx.setNavigationBarTitle({
@@ -35,8 +47,18 @@ Page({
   },
 
   onLoad: function () {
-    this.load()
+    this.load();
+    const currentDate = new Date().toLocaleDateString('zh-CN', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    // 设置 data 中的 currentDate
+    this.setData({
+      currentDate: currentDate.replace(/年|月/g, '$&').replace('日', '日')
+    });
   },
+
 
   inputChangeHandle: function (e) {
     this.setData({ input: e.detail.value })

@@ -1,11 +1,14 @@
 <view class="todo_container">
 
   <view class="header">
+    <!-- 添加日期显示 -->
+    <view class="date">{{ currentDate }}</view>
     <!-- Replace the input field and add button with three custom image buttons -->
     <div class="custom-btn sun" bindtap="handleGetup"></div>
     <div class="custom-btn moon" bindtap="handleSleep"></div>
     <div class="custom-btn setting" bindtap="handleAddToDo"></div>
   </view>
+
 
   <block wx:if="{{ todos.length }}">
     <view class="footer">
@@ -17,13 +20,14 @@
     </view>
     <view class="todos">
       <!-- List items should get the class `completed` when marked as completed -->
-      <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="{{ index }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
+      <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="{{ index }}" bindtap="toggleTodoHandle" data-index="{{ index }}" style="background-image: url({{ backgrounds[index % backgrounds.length] }});">
         <!-- completed: success, todo: circle -->
         <icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}" />
         <text class="name">{{ item.name }}</text>
         <icon class="remove" type="clear" size="16" catchtap="removeTodoHandle" data-index="{{ index }}" />
       </view>
     </view>
+
 
   </block>
   <block wx:else>
