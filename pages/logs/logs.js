@@ -36,7 +36,7 @@ Page({
       extra: {
           ringWidth: 20,
           pie: {
-              offsetAngle: -45
+              offsetAngle: -135
           }
       },
       title: {      
@@ -45,22 +45,21 @@ Page({
           fontSize: 25
       },
       subtitle: {
-          name: '专注次数',
+          name: '打卡次数',
           color: '#666666',
           fontSize: 12
       },
       series: [{
-          name: 'work',
-          data: worknum/2,
-          stroke: true,
-          color: '#3596f1'
-      }, {
-          name: 'rest',
-          data: restnum/2,
-           stroke: false,
-           color:'#0fc975'
-      }
-    ],
+        name: 'work',
+        data: worknum / 2,
+        stroke: true,
+        color: '#FF6B6B' // 深粉红色
+    }, {
+        name: 'rest',
+        data: restnum / 2,
+        stroke: false,
+        color: '#7B61FF' // 淡紫色
+    }],
       disablePieStroke: true,
       width: windowWidth*0.96,
       height:170,

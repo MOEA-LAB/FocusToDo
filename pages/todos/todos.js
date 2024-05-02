@@ -229,7 +229,7 @@ Page({
   },
 
   handleGetup: function() {
-    const logName = "Getup";
+    const logName = "起床打卡";
     const startTimeShow = new Date().toLocaleTimeString();
     this.data.log = {
       name: logName,
@@ -244,7 +244,7 @@ Page({
     });
   },
   handleSleep: function() {
-    const logName = "Sleep";
+    const logName = "睡觉打卡";
     const startTimeShow = new Date().toLocaleTimeString();
     this.data.log = {
       name: logName,

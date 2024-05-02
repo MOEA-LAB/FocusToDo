@@ -13,7 +13,7 @@
           log.action == '起床打卡' ? '☀' :
           log.action == '睡觉打卡' ? '☾' : ''
         }}</text>
-      <text class="{{log.name=='休息'?'log_name_rest':'log_name_work'}}">{{log.name}}</text>
+      <text class="{{log.name=='休息'?'log_name_rest' : (log.name=='起床打卡'?'log_name_getup': (log.name=='睡觉打卡'?'log_name_sleep':'log_name_work'))}}">{{log.name}}</text>
     </view>
   </scroll-view>
 

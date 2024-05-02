@@ -3,9 +3,9 @@
     "weui": true
   },
   "pages": [
+    "pages/setting/setting",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/setting/setting",
     "pages/setting/rank/rank",
     "pages/setting/setmore/setmore",
     "pages/about/about",
