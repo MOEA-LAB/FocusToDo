@@ -1,92 +1,66 @@
-// pages/more/more.js
-let interstitialAd = null
+// diary.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    currentDate: '',
+    diaryContent: '',
+    savedDiaries: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-
-  onLoad() {
-
+  onLoad: function () {
+    this.getCurrentDate();
+    this.loadDiaries();
   },
-
-  onLoad: function (options) {
- 
+  getCurrentDate: function () {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const seconds = date.getSeconds().toString().padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    this.setData({
+      currentDate: formattedDate
+    });
   },
-
-  data:{
-    　　extraData: {
-    　　　　from: ''
-    　　}
-    },
-    
-    toMiniProgramSuccess(res){
-        //从其他小程序返回的时候触发
-        wx.showToast({
-          title: '通过超链接跳转其他小程序成功返回了'
-        })
-    },
-  onReady: function () {
-
+  onInput: function (event) {
+    this.setData({
+      diaryContent: event.detail.value
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    wx.setNavigationBarTitle({
-      title: '更多好用'});
+  saveDiary: function () {
+    const diary = this.data.currentDate + '\n' + this.data.diaryContent;
+    const savedDiaries = [...this.data.savedDiaries, diary];
+    wx.setStorageSync('diaries', savedDiaries);
+    this.setData({
+      savedDiaries: savedDiaries,
+      diaryContent: '' // 清空输入框
+    });
+    wx.showToast({
+      title: '保存成功',
+      icon: 'success'
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  loadDiaries: function () {
+    const savedDiaries = wx.getStorageSync('diaries');
+    if (savedDiaries) {
+      this.setData({
+        savedDiaries: savedDiaries
+      });
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  deleteDiary: function (event) {
+    const index = event.currentTarget.dataset.index;
+    const savedDiaries = this.data.savedDiaries;
+    savedDiaries.splice(index, 1);
+    wx.setStorageSync('diaries', savedDiaries);
+    this.setData({
+      savedDiaries: savedDiaries
+    });
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-    onShareTimeline: function (res){
-        return{  
-          title: '管理时间，保持专注，让自律成为习惯！',
-          query: {   
-            // key: 'value' //要携带的参数 
-          },  
-          imageUrl: '/image/about.png'   
-        }    
-      }
-   
-})
+  deleteAllDiaries: function () {
+    wx.removeStorageSync('diaries');
+    this.setData({
+      savedDiaries: []
+    });
+  }
+});

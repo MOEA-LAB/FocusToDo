@@ -1,4 +1,78 @@
-/* pages/more/more.wxss */
-.adContainer {
-  width: 100%;
+/* diary.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 20rpx;
+}
+
+.date {
+  font-size: 16rpx;
+  margin-bottom: 10rpx;
+  color: #666;
+}
+
+.diary-input {
+  width: 90%;
+  height: 200rpx;
+  margin: 0 auto 20rpx auto; /* 设置上下边距，左右自动居中 */
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+}
+
+
+.save-button {
+  width: 90%;
+  height: 40rpx;
+  background-color: #07c160;
+  color: #fff;
+  border: none;
+  border-radius: 5rpx;
+  font-size: 16rpx;
+  text-align: center;
+  line-height: 40rpx;
+  cursor: pointer;
+}
+
+.saved-diaries {
+  width: 90%;
+}
+
+.saved-diaries text {
+  display: block;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  margin-bottom: 10rpx;
+  background-color: #f2f2f2;
+  font-size: 14rpx;
+}
+
+.saved-diaries .delete-button {
+  float: right;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 5rpx;
+  font-size: 14rpx;
+  padding: 5rpx 10rpx;
+  margin-left: 10rpx;
+  cursor: pointer;
+}
+
+.delete-all-button {
+  width: 200rpx;
+  height: 40rpx;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 5rpx;
+  font-size: 16rpx;
+  text-align: center;
+  line-height: 40rpx;
+  cursor: pointer;
+  margin-top: 20rpx;
 }
