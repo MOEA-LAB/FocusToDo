@@ -36,7 +36,7 @@ Page({
       extra: {
           ringWidth: 20,
           pie: {
-              offsetAngle: -135
+              offsetAngle: -145
           }
       },
       title: {      

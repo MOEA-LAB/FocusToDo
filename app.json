@@ -3,9 +3,10 @@
     "weui": true
   },
   "pages": [
+    "pages/index/index",
     "pages/setting/setting",
     "pages/setting/feedback/index",
-    "pages/index/index",
+    
     "pages/logs/logs",
     "pages/setting/rank/rank",
     "pages/setting/setmore/setmore",
