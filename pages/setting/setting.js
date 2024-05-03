@@ -5,6 +5,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
+    avatarUrl:"",
+    nickName:"",
 
     vibison: false,
     iosDialog2: false,
@@ -57,9 +59,12 @@ Page({
     wx.getUserProfile({
       desc: '完善信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
+        console.log(res.userInfo)
         this.setData({
           userInfo: res.userInfo,
-          hasUserInfo: true
+          hasUserInfo: true,
+          avatarUrl: res.userInfo.avatarUrl,
+          nickName: res.userInfo.nickName,
         })
       }
     })
@@ -159,9 +164,9 @@ setTimeout(() => {
       // 来自页面内转发按钮
       console.log(res.target)
       return {
-        title: '管理时间，保持专注！一起来提高学习工作效率。',
+        title: '有效利用时间，集中精力，一起提高我们的学习效率！',
         path: '/pages/index/index',
-        imageUrl: '/image/about.png' //不设置则默认为当前页面的截图
+        imageUrl: '/image/share1.png' //不设置则默认为当前页面的截图
       }
     }
   },
@@ -173,7 +178,14 @@ setTimeout(() => {
       },
       imageUrl: '/image/about.png'
     }
-  }
+  },
+
+  // gotochange: function() {
+  //   // 跳转到修改界面
+  //   wx.navigateTo({
+  //     url: '/pages/changePage/changePage', // 假设修改界面的路径为/pages/changePage/changePage
+  //   })
+  // },
 
 
 })

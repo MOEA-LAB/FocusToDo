@@ -7,7 +7,7 @@ Page({
   },
 // 在页面onLoad回调事件中创建插屏广告实例
 onLoad() {
-  if (wx.createInterstitialAd) {
+  if (false) {
     interstitialAd = wx.createInterstitialAd({
       adUnitId: 'adunit-720b41e17cd7e702'
     })

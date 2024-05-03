@@ -5,8 +5,8 @@
 .userTop{
     width: 100%;
     position: absolute;
-    top: -180px;
-    filter: blur(5px);
+    top: -10px;
+    filter: blur(3px);
 }
 .userAva{
 height: 100rpx;
@@ -19,7 +19,7 @@ border-radius: 8px;
 .rank1{
     width: 100%;
     background-color: white;
-    height: 130rpx;
+    height: 380rpx;
     z-index: 10;
     position: absolute;
     top: 400rpx;

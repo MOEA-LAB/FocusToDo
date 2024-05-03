@@ -1,0 +1,18 @@
+<!-- changePage.wxml -->
+
+<view class="container">
+  <view class="avatar-container">
+    <!-- 显示当前头像 -->
+    <image src="{{avatarUrl}}" class="avatar"></image>
+    <!-- 选择新头像 -->
+    <button bindtap="chooseImage" class="choose-btn">选择头像</button>
+  </view>
+  
+  <!-- 输入新用户名字 -->
+  <view class="input-container">
+    <input placeholder="请输入新用户名字" value="{{newUserName}}" bindinput="inputUserName" class="input"></input>
+  </view>
+
+  <!-- 确认修改按钮 -->
+  <button bindtap="confirmChange" class="confirm-btn">确认修改</button>
+</view>

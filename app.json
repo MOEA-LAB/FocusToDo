@@ -4,6 +4,7 @@
   },
   "pages": [
     "pages/setting/setting",
+    "pages/setting/feedback/index",
     "pages/index/index",
     "pages/logs/logs",
     "pages/setting/rank/rank",
@@ -14,7 +15,8 @@
     "pages/poster/poster",
     "pages/version/version",
     "pages/night/index",
-    "pages/morning/index"
+    "pages/morning/index",
+    "pages/changePage/changePage"
   ],
   "navigateToMiniProgramAppIdList": [
     "wxe333b834a643f99d",

@@ -2,7 +2,26 @@
 Page({
 
     data: {
-        canIUse: wx.canIUse('button.open-type.getUserInfo')
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        users: [
+          {
+            avatarUrl: "https://randomuser.me/api/portraits/men/1.jpg",
+            nickName: "小明"
+          },
+          {
+            avatarUrl: "https://randomuser.me/api/portraits/women/2.jpg",
+            nickName: "小红"
+          },
+          {
+            avatarUrl: "https://randomuser.me/api/portraits/men/3.jpg",
+            nickName: "小刚"
+          },
+          {
+            avatarUrl: "https://randomuser.me/api/portraits/women/4.jpg",
+            nickName: "小美"
+          },
+          // 可以继续添加更多用户数据...
+        ]
       },
       onLoad: function() {
         // 查看是否授权
