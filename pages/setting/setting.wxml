@@ -40,7 +40,7 @@
   <view class="weui-cells weui-cells_after-title" style="margin-top: 20px; margin-left: 10px; margin-right: 10px; border-radius: 10px;">
   <view class="weui-cell weui-cell_select">
     <view class="weui-cell__hd">
-      <image src="../../image/fores.png" style="margin: 0 16px; vertical-align: middle; width: 20px; height: 20px;"></image>
+      <image src="../../image/music.png" style="margin: 0 16px; vertical-align: middle; width: 20px; height: 20px;"></image>
     </view>
     <view class="weui-cell__bd">白噪声</view>
 
@@ -55,7 +55,8 @@
 <view class="weui-cells weui-cells_after-title" style="margin-top: 20px; margin-left: 10px; margin-right: 10px; border-radius: 10px;">
   <navigator url="../setting/rank/rank" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
-      <image src="../../image/rank.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      <image src="../../image/rank1.png" style="margin-right: 16px; margin-top: 4px; vertical-align: middle; width: 18px; height: 24px;"></image>
+
     </view>
     <view class="weui-cell__bd">排行榜</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -63,7 +64,7 @@
 
   <navigator target="self" open-type="navigate" url="/pages/setting/feedback/index" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
-      <image src="../../image/tucao.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      <image src="../../image/feedback.png" style="margin-right: 12px;vertical-align: middle;width:22px; height: 18px;"></image>
     </view>
     <view class="weui-cell__bd">反馈</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -72,7 +73,7 @@
 
   <navigator url="../more/more" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
-      <image src="../../image/more.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      <image src="../../image/dairy.png" style="margin-right: 16px;vertical-align: middle;width:18px; height: 22px;"></image>
     </view>
     <view class="weui-cell__bd">日志</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -80,7 +81,7 @@
 
   <navigator url="../about/about" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
-      <image src="../../image/instruction.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      <image src="../../image/about1.png" style="margin-right: 16px;vertical-align: middle;width:14px; height: 24px;"></image>
     </view>
     <view class="weui-cell__bd">关于</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -91,7 +92,7 @@
 <view class="weui-cells weui-cells_after-title" style="margin-top: 20px; margin-left: 10px; margin-right: 10px; border-radius: 10px;">
   <navigator url="../setting/setmore/setmore" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
-      <image src="../../image/set-up.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      <image src="../../image/setting.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
     </view>
     <view class="weui-cell__bd">设置</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -110,6 +111,6 @@
     <view class="weui-footer__text">©2024-2027 REALY</view>
   </view>
 
-  <ad unit-id="adunit-45472909deac0995" style="margin-top: 30rpx;"></ad>
+  <!-- <ad unit-id="adunit-45472909deac0995" style="margin-top: 30rpx;"></ad> -->
 
 </view>

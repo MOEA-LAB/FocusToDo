@@ -119,14 +119,14 @@ Page({
 
   startNameAnimation: function () {
     let animation = wx.createAnimation({
-      duration: 450
-    })
-    animation.opacity(0.2).step()
-    animation.opacity(1).step()
+      duration: 1000
+    });
+    animation.opacity(0.2).step().opacity(1).step(); // 连续设置透明度变化
     this.setData({
       nameAnimation: animation.export()
-    })
+    });
   },
+  
 
   stopTimer: function () {
     // reset circle progress

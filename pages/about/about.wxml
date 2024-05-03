@@ -33,7 +33,7 @@
   <!-- <button class="btnabout" bindtap="previewImage">请作者喝杯咖啡 😜</button> -->
   <view class="about_footer">
     <view class="weui-footer__links">
-      <navigator url="../version/version" class="weui-footer__link" style="color: #576b95;">版本 1.0</navigator>
+      <navigator url="../version/version" class="weui-footer__link" style="color: #576b95;">版本 1.2.2</navigator>
       <button open-type='share' class="footer_button">邀请好友</button>
     </view>
     <view class="weui-footer__text">版权所有 2024-2027. WeChat@REALY</view>
