@@ -6,7 +6,7 @@ Page({
    */
   data: {
     lognum:'',
-    imageUrl:'../../image/poster.jpg',
+    imageUrl:'../../image/p.png',
     imageWidth:0,
     imageHeight:0,
     canvasw:'',
@@ -28,8 +28,8 @@ Page({
       success(res) {
         console.log(res);
         that.setData({
-          imageWidth: res.width / 4.5,
-          imageHeight: res.height / 4.5
+          imageWidth: res.width / 2,
+          imageHeight: res.height / 2
         })
         that.drawing('myCanvas',{});
       }
