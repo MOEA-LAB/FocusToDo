@@ -3,10 +3,10 @@
     "weui": true
   },
   "pages": [
+    "pages/chat/chat",
     "pages/index/index",
     "pages/setting/setting",
     "pages/setting/feedback/index",
-    
     "pages/logs/logs",
     "pages/setting/rank/rank",
     "pages/setting/setmore/setmore",
