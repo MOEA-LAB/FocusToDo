@@ -151,6 +151,9 @@ Page({
   toBackClick: function () {
     // No need to redirect back to the login page
     // wx.navigateBack({})
+    wx.switchTab({
+      url: '/pages/todos/todos' // 导航到标签栏页面的路径
+    });
   },
 
   /**

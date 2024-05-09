@@ -3,8 +3,8 @@
     "weui": true
   },
   "pages": [
-    "pages/chat/chat",
     "pages/index/index",
+    "pages/chat/chat",
     "pages/setting/setting",
     "pages/setting/feedback/index",
     "pages/logs/logs",

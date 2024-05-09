@@ -4,6 +4,7 @@
     <!-- 添加日期显示 -->
     <view class="date">{{ currentDate }}</view>
     <!-- Replace the input field and add button with three custom image buttons -->
+    <div class="custom-btn ai" bindtap="aiGetup"></div>
     <div class="custom-btn sun" bindtap="handleGetup"></div>
     <div class="custom-btn moon" bindtap="handleSleep"></div>
     <div class="custom-btn setting" bindtap="handleAddToDo"></div>

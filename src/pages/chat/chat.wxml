@@ -1,7 +1,6 @@
 <!--pages/contact/contact.wxml-->
 
 <view id="chatPage">
-
   <scroll-view scroll-y scroll-x scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
     <!-- <view class='scrollMsg'> -->
     <block wx:key wx:for='{{msgList}}' wx:for-index="index">
@@ -39,7 +38,10 @@
   </scroll-view>
 
   <view class='inputRoom' style='bottom: {{inputBottom}}'>
-    <image style='width: 7vw; margin-left: 3.2vw;' src='/image/文件夹.png' mode='widthFix'></image>
-    <input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
-  </view>
+    <navigator url="pages/index/index" bindtap="toBackClick">
+  <image style='width: 7vw; margin-left: 3.2vw;' src='/image/文件夹.png' mode='widthFix'></image>
+</navigator>
+  <input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+</view>
+
 </view>

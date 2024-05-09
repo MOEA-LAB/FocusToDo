@@ -155,6 +155,8 @@ margin: 0 3%;
 @import "./sun.wxss";
 @import "./moon.wxss";
 @import "./set.wxss";
+@import "./ai.wxss";
+
 
 
 

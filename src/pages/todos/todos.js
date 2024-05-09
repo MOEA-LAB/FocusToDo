@@ -257,6 +257,12 @@ Page({
     wx.navigateTo({
       url: '/pages/night/index', // todos页面的路径
     });
-  }  
+  },
+
+  aiGetup: function(){
+    wx.navigateTo({
+      url: '/pages/chat/chat',
+    })
+  }
 
 })
