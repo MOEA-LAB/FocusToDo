@@ -1,1 +1,1 @@
-[2024/5/12] [Logs]: assign tasks
+[2024/05/12] [Logs]: Assign tasks
