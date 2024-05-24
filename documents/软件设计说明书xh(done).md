@@ -69,7 +69,7 @@
 
 ​	AI助手模块通过调用GPT接口完成，即输入文字，完成对话。
 
-<img src=".\assets\image-20240515005.png" style="zoom:50%;" />
+<img src=".\assets\image-20240525010337138.png" style="zoom: 25%;" />
 
 ### 3.6 接口设计
 

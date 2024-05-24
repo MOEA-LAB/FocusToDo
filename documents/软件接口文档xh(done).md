@@ -130,15 +130,11 @@ Content-Type: application/json
 GET /pages/index/index.js/onLoad
 ```
 
-## 6 错误处理
-
-服务器端会返回合适的 HTTP 状态码和错误信息，例如 404 Not Found 表示接口不存在，500 Internal Server Error 表示服务器内部错误等。
-
-## 7 安全性和权限
+## 6 安全性和权限
 
 所有接口都需要合法的用户身份验证，使用 Token 或其他安全机制保护接口的访问权限。
 
-## 8 附录
+## 7 附录
 
 - 数据格式：接口返回数据为 JSON 格式
 - 标准参考：遵循微信小程序 API 设计规范
