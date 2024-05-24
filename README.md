@@ -1,9 +1,30 @@
-## 小程序部分功能截图
+# Focus-MiniProgram
+## 🌟 Collaborators 🌟
 
-<img src="./assets/image-20240525012703006.png" alt="image-20240525012703006" style="zoom:50%;" />
+All collaborators are students from the School of Intelligent Systems Engineering , Sun Yat-sen University, Class of 2021.
 
-<img src="./assets/image-20240525012621723.png" alt="image-20240525012621723" style="zoom:50%;" />
+- **Weiliang Deng**  
+  📧 Email: dengwliang@mail2.sysu.edu.cn
 
-<img src="./assets/image-20240525012757739.png" alt="image-20240525012757739" style="zoom:50%;" />
+- **Weichen Lyu**  
+  📧 Email: weichen.lyu@example.com
 
-<img src="./assets/image-20240525012818132.png" alt="image-20240525012818132" style="zoom:50%;" />
+- **Hang Xiang**  
+  📧 Email: hang.xiang@example.com
+
+- **Xinsheng Fu**  
+  📧 Email: xinsheng.fu@example.com
+
+- **Jiarui Ouyang**  
+  📧 Email: jiarui.ouyang@example.com
+
+
+## 📸 Screenshots
+
+<img src="./assets/image-20240525012703006.png" alt="image-20240525012703006" style="zoom: 25%;" />
+
+<img src="./assets/image-20240525012621723.png" alt="image-20240525012621723" style="zoom: 25%;" />
+
+<img src="./assets/image-20240525012757739.png" alt="image-20240525012757739" style="zoom: 25%;" />
+
+<img src="./assets/image-20240525012818132.png" alt="image-20240525012818132" style="zoom: 25%;" />
