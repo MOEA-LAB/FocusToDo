@@ -7,7 +7,7 @@ All collaborators are students from the School of Intelligent Systems Engineerin
   📧 Email: dengwliang@mail2.sysu.edu.cn
 
 - **Weichen Lyu**  
-  📧 Email: weichen.lyu@example.com
+  📧 Email: lvwch@mail2.sysu.edu.com
 
 - **Hang Xiang**  
   📧 Email: hang.xiang@example.com
