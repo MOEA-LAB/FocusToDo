@@ -10,7 +10,7 @@ All collaborators are students from the School of Intelligent Systems Engineerin
   📧 Email: lvwch@mail2.sysu.edu.com
 
 - **Hang Xiang**  
-  📧 Email: hang.xiang@example.com
+  📧 Email: xiangh9@mail2.sysu.edu.cn
 
 - **Xinsheng Fu**  
   📧 Email: xinsheng.fu@example.com
