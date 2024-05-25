@@ -6,7 +6,7 @@
 <div align="center">
 
 ## FocusToDo: A MiniProgram for Focused Time Tracking
-[📄[Document](https://github.com/Dwl2021/FocusToDo-MiniProgram/blob/main/document.pdf)] &emsp; [💻[Platform](https://mp.weixin.qq.com/cgi-bin/wx)] &emsp; <br>
+[📄[Document](https://github.com/Dwl2021/FocusToDo-MiniProgram/blob/main/report.pdf)] &emsp; [💻[Platform](https://mp.weixin.qq.com/cgi-bin/wx)] &emsp; <br>
 [🌅[Code](https://github.com/Dwl2021/FocusToDo-MiniProgram.git)] &emsp;<br>
 
 </div>
