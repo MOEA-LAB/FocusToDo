@@ -27,4 +27,3 @@ All collaborators are students from the School of Intelligent Systems Engineerin
     <img src="./assets/image-20240525012757739.png" alt="image-20240525012757739" width="200" />
     <img src="./assets/image-20240525012818132.png" alt="image-20240525012818132" width="200" />
 </div>
-
