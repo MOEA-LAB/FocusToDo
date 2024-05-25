@@ -5,14 +5,14 @@
 
 <div align="center">
 
-## FocusToDo
+## FocusToDo: A MiniProgram for Focused Time Tracking
 [📄[Document](https://github.com/Dwl2021/FocusToDo-MiniProgram/blob/main/document.pdf)] &emsp; [💻[Platform](https://mp.weixin.qq.com/cgi-bin/wx)] &emsp; <br>
 
 </div>
 
 
 
-### 🌟 Collaborators 🌟
+## 🌟 Collaborators 🌟
 
 All collaborators are students from the School of Intelligent Systems Engineering , Sun Yat-sen University, Class of 2021.
 
@@ -32,7 +32,7 @@ All collaborators are students from the School of Intelligent Systems Engineerin
   📧 Email: ouyjr@mail2.sysu.edu.cn
 
 
-### 📸 Screenshots
+## 📸 Screenshots
 
 <div style="text-align: center;">
     <img src="./assets/image-20240525012703006.png" alt="image-20240525012703006" width="200" />
