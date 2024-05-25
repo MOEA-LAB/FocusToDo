@@ -16,7 +16,7 @@ All collaborators are students from the School of Intelligent Systems Engineerin
   📧 Email: xinsheng.fu@example.com
 
 - **Jiarui Ouyang**  
-  📧 Email: jiarui.ouyang@example.com
+  📧 Email: ouyjr@mail2.sysu.edu.cn
 
 
 ## 📸 Screenshots
