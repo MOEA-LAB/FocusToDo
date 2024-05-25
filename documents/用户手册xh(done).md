@@ -216,7 +216,15 @@ d. **其他必要的支持软件**：
 
 **页面展示**
 
-<img src="./assets/image-20240515001.png" alt="image-20240515001" style="zoom: 50%;">
+<img src="./assets/image-20240525010059468.png" alt="image-20240525010059468" style="zoom:25%;" />
+
+同时还可能会初始化出不同的的封面如下，
+
+<img src="./assets/image-20240525010141109.png" alt="image-20240525010141109" style="zoom:25%;" />
+
+<img src="./assets/image-20240525010156219.png" alt="image-20240525010156219" style="zoom:25%;" />
+
+<img src="./assets/image-20240525010211274.png" alt="image-20240525010211274" style="zoom:25%;" />
 
 
 
@@ -230,7 +238,7 @@ d. **其他必要的支持软件**：
 
 **页面展示**
 
-<img src="./assets/image-20240515002.png" alt="image-20240515002" style="zoom: 50%;">
+<img src="./assets/image-20240525010231155.png" alt="image-20240525010231155" style="zoom:25%;" />
 
 ### 统计数据
 
@@ -242,7 +250,9 @@ d. **其他必要的支持软件**：
 
 **页面展示**
 
-<img src="./assets/image-20240515003.png" alt="image-20240515003" style="zoom: 50%;">
+<img src="./assets/image-20240525005257132.png" alt="image-20240525005257132" style="zoom: 25%;" />
+
+
 
 ### 个人中心
 
@@ -254,7 +264,7 @@ d. **其他必要的支持软件**：
 
 **页面展示**
 
-<img src="./assets/image-20240515004.png" alt="image-20240515004" style="zoom: 50%;">
+<img src="./assets/image-20240525005337867.png" alt="image-20240525005337867" style="zoom:25%;" />
 
 ### AI助手
 
@@ -265,9 +275,7 @@ d. **其他必要的支持软件**：
 
 **页面展示**
 
-<img src=".\assets\image-20240515005.png" style="zoom: 50%;" />
-
-
+<img src="./assets/image-20240525010337138.png" alt="image-20240525010337138" style="zoom:25%;" />
 
 以上是FocusToDo小程序的各项功能模块的详细说明。这些功能将帮助用户有效管理时间、提高工作效率，并提供个性化的时间管理支持和建议。
 
@@ -287,7 +295,7 @@ d. **其他必要的支持软件**：
 
 ​	个人中心首页即可修改白噪声，具有静音、林间、雨声等多种选项；
 
-<img src=".\assets\image-20240516171948399.png" alt="image-20240516171948399" style="zoom: 50%;" />
+<img src="./assets/image-20240525005422101.png" alt="image-20240525005422101" style="zoom:25%;" />
 
 #### 头像、昵称
 
@@ -321,7 +329,7 @@ d. **其他必要的支持软件**：
 
 ​	勾选事项左方的圆圈，即可表示完成事项；选择左侧列表状图案，代表一键完成所有任务。
 
-<img src=".\assets\image-20240516172921630.png" alt="image-20240516172921630" style="zoom: 50%;" />
+<img src="./assets/image-20240525010024905.png" alt="image-20240525010024905" style="zoom:25%;" />
 
 #### 早晚打卡
 
@@ -331,7 +339,15 @@ d. **其他必要的支持软件**：
 
 <img src=".\assets\image-20240516173125771.png" alt="image-20240516173125771" style="zoom: 50%;" />
 
+<<<<<<< HEAD
 ### 开始专注、休息
+=======
+并且每次打卡之后都会有记录保存。
+
+<img src="./assets/image-20240525005749723.png" alt="image-20240525005749723" style="zoom:25%;" />
+
+### 5.3 开始专注、休息
+>>>>>>> 98a175ea274e5109c6842b5019d7a03a5081cbbf
 
 #### 设置本次专注的时间
 
@@ -343,9 +359,9 @@ d. **其他必要的支持软件**：
 
 ​	选择待办事项，点击工作或者休息；
 
-<img src=".\assets\image-20240518215231964.png" alt="image-20240518215231964" style="zoom: 50%;" />
+<img src="./assets/image-20240525005631313.png" alt="image-20240525005631313" style="zoom:25%;" />
 
-<img src=".\assets\image-20240518215336515.png" alt="image-20240518215336515" style="zoom:50%;" />
+<img src="./assets/image-20240525005619891.png" alt="image-20240525005619891" style="zoom:25%;" />
 
 ### 查看数据统计
 
@@ -353,9 +369,17 @@ d. **其他必要的支持软件**：
 
 <img src=".\assets\image-20240516173812245.png" alt="image-20240516173812245" style="zoom:50%;" />
 
+<<<<<<< HEAD
 ### AI助手
+=======
+点击左上角的按钮，即可打卡分享。
 
-​	进入待办事项页面，点击左上方互联网标志，即可进入AI助手页面；同时需要启动server.py文件。
+<img src="./assets/image-20240525005900492.png" alt="image-20240525005900492" style="zoom:25%;" />
+
+### 5.5 AI助手
+>>>>>>> 98a175ea274e5109c6842b5019d7a03a5081cbbf
+
+​	进入待办事项页面，点击左上方互联网标志，即可进入AI助手页面。
 
 <img src=".\assets\image-20240516173933707.png" alt="image-20240516173933707" style="zoom:50%;" />
 
@@ -367,11 +391,15 @@ d. **其他必要的支持软件**：
 
 ​	在个人中心的最下方，就可以将这个有趣的软件分享给好友啦！
 
-<img src=".\assets\image-20240518215906672.png" alt="image-20240518215906672" style="zoom:50%;" />
+<img src="./assets/image-20240525005534142.png" alt="image-20240525005534142" style="zoom:25%;" />
+
+<img src="./assets/image-20240525005517035.png" alt="image-20240525005517035" style="zoom:25%;" />
 
 #### 反馈
 
-​	点击反馈页面，即可进入小程序对于的github项目库反映问题啦！
+​	点击反馈页面，即可进入跳转到github项目库反映问题啦！也可以通过链接的方式反映哦！https://github.com/Dwl2021/Focus-MiniProgram/issues
+
+<img src="./assets/image-20240525010444116.png" alt="image-20240525010444116" style="zoom:33%;" />
 
 ​	手册到此结束啦，祝您使用愉快！
 
