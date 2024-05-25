@@ -10,7 +10,11 @@
 
 </div>
 
+**🏆Key Features:**
 
+- **Pomodoro Timer:** Set and track focus sessions to boost productivity.
+- **Sleep and Wake Check-ins:** Log wake-up and sleep times to build healthy habits.
+- **AI Chat Functionality:** Engage with an AI for advice, questions, and motivation.
 
 ## 🌟 Collaborators 🌟
 
